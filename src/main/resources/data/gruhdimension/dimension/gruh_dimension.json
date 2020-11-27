@@ -1,0 +1,27 @@
+{
+  "type": "gruhdimension:gruh_dimension",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [
+        {
+          "height": 1,
+          "block": "minecraft:bedrock"
+        },
+        {
+          "height": 50,
+          "block": "gruhdimension:gruh_fabric"
+        }
+      ],
+      "biome": "minecraft:plains",
+      "features": false,
+      "structures": {
+        "stronghold": {
+          "count": 0
+        },
+        "structures": {
+        }
+      }
+    }
+  }
+}

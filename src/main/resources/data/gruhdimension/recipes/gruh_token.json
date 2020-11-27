@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " N ",
+    "NEN",
+    " N "
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:quartz"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "gruhdimension:gruh_token",
+    "count": 1
+  }
+}

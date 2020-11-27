@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "gruhdimension",
+  "version": "${version}",
+  "name": "GruhDimension",
+  "description": "Pissing about as usual",
+  "authors": [
+    "printer83mph"
+  ],
+  "contact": {
+    "website": "http://www.unclefallingdownthestairs.com/"
+  },
+  "license": "MIT",
+  "icon": "assets/gruhdimension/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.unclefallingdownthestairs.gruhdimension.client.GruhdimensionClient"
+    ],
+    "main": [
+      "com.unclefallingdownthestairs.gruhdimension.GruhDimension"
+    ],
+    "cardinal-components": [
+      "com.unclefallingdownthestairs.gruhdimension.components.GruhComponents"
+    ]
+  },
+  "mixins": [
+    "gruhdimension.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.8",
+    "fabric": "*",
+    "minecraft": "1.16.4"
+  },
+  "custom": {
+    "cardinal-components": [
+      "gruhdimension:loc_count",
+      "gruhdimension:return_loc"
+    ]
+  }
+}
