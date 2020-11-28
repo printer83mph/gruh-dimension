@@ -1,37 +1,49 @@
 package com.unclefallingdownthestairs.gruhdimension.components;
 
-import com.unclefallingdownthestairs.gruhdimension.GruhDimension;
-import dev.onyxstudios.cca.api.v3.component.ComponentKey;
-import dev.onyxstudios.cca.api.v3.component.ComponentRegistry;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
-public class LocCountComponent implements IntComponent {
+import java.util.ArrayList;
+import java.util.Random;
 
-    private int count = 0;
+public class LocCountComponent implements IntListComponent {
+
+    private static Random rand = new Random();
+    private ArrayList<Integer> existingIds;
 
     public static LocCountComponent get(World world) {
         return (LocCountComponent) GruhComponents.LOC_COUNT.get(world);
     }
 
     @Override
-    public int getValue() {
-        return count;
+    public ArrayList<Integer> getValue() {
+        return existingIds;
     }
 
-    public void increaseCount() {
-        count++;
+    public int newId() {
+        Integer newId;
+        do {
+            newId = rand.nextInt(2500);
+        } while (existingIds != null && existingIds.contains(newId));
+        return newId;
     }
 
     @Override
     public void readFromNbt(CompoundTag compoundTag) {
-        this.count = compoundTag.getInt("count");
+        existingIds = new ArrayList<Integer>();
+        int[] readIds = compoundTag.getIntArray("travelIds");
+        for (int i : readIds) {
+            existingIds.add(i);
+        }
     }
 
     @Override
     public void writeToNbt(CompoundTag compoundTag) {
-        compoundTag.putInt("count", this.count);
+        if (existingIds == null) return;
+        int[] out = new int[existingIds.size()];
+        for (Integer i = 0; i < existingIds.size(); i++) {
+            out[i] = existingIds.get(i);
+        }
+        compoundTag.putIntArray("travelIds", out);
     }
 }

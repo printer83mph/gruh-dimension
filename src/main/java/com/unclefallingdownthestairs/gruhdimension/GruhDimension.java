@@ -1,11 +1,9 @@
 package com.unclefallingdownthestairs.gruhdimension;
 
-import com.unclefallingdownthestairs.gruhdimension.dimension.GruhDimProperties;
 import com.unclefallingdownthestairs.gruhdimension.registry.GruhBlocks;
 import com.unclefallingdownthestairs.gruhdimension.registry.GruhItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class GruhDimension implements ModInitializer {
 
@@ -18,6 +16,7 @@ public class GruhDimension implements ModInitializer {
 
         GruhBlocks.RegisterBlocks();
         GruhItems.RegisterItems();
+//        GruhRecipes.RegisterRecipes();
 
     }
 

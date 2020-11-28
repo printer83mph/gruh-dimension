@@ -12,8 +12,8 @@ import net.minecraft.util.Identifier;
 
 public class GruhComponents implements WorldComponentInitializer, EntityComponentInitializer {
 
-    public static final ComponentKey<IntComponent> LOC_COUNT =
-            ComponentRegistry.getOrCreate(new Identifier(GruhDimension.MOD_ID, "loc_count"), IntComponent.class);
+    public static final ComponentKey<IntListComponent> LOC_COUNT =
+            ComponentRegistry.getOrCreate(new Identifier(GruhDimension.MOD_ID, "loc_count"), IntListComponent.class);
      public static final ComponentKey<LocComponent> RETURN_LOC =
              ComponentRegistry.getOrCreate(new Identifier(GruhDimension.MOD_ID, "return_loc"), LocComponent.class);
 

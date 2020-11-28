@@ -1,6 +1,11 @@
 {
   "item.gruhdimension.gruh_token": "Gruh Token",
   "item.gruhdimension.gruh_tablet": "Gruh Tablet",
+  "item.gruhdimension.gruh_sword": "Gruh Sword",
+  "item.gruhdimension.gruh_shovel": "Gruh Shovel",
+  "item.gruhdimension.gruh_pickaxe": "Gruh Pickaxe",
+  "item.gruhdimension.gruh_axe": "Gruh Axe",
+  "item.gruhdimension.gruh_hoe": "Gruh Hoe",
   "block.gruhdimension.gruh_fabric": "Gruh Fabric",
   "itemGroup.gruhdimension.items": "Gruh Dimension",
   "gui.gruhdimension.travel": "Travel"

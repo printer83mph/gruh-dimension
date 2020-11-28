@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": {
+      "item": "gruhdimension:gruh_fabric"
+    }
+  },
+  "result": {
+    "item": "gruhdimension:gruh_tablet",
+    "count": 1
+  }
+}
